@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/War/static/css/main.89b45729.css",
+    "main.js": "/War/static/js/main.baa4efd5.js",
+    "static/media/10H.png": "/War/static/media/10H.4969fb73292f5469e08a.png",
+    "static/media/12H.png": "/War/static/media/12H.47f69c9c9a56f2bcab5b.png",
+    "static/media/10C.png": "/War/static/media/10C.7f73a1ae418acf4ad5fb.png",
+    "static/media/10S.png": "/War/static/media/10S.113970a02f33b1649001.png",
+    "static/media/12D.png": "/War/static/media/12D.c1a3eadab7c454f0831f.png",
+    "static/media/11S.png": "/War/static/media/11S.a4dabd4d6a235c07a556.png",
+    "static/media/11H.png": "/War/static/media/11H.2dc072b7180d97cf89db.png",
+    "static/media/12S.png": "/War/static/media/12S.e6f2e18965b77c5de302.png",
+    "static/media/11C.png": "/War/static/media/11C.e962a0a1439e7e2f717c.png",
+    "static/media/12C.png": "/War/static/media/12C.e2930ec432ff60ea9aa2.png",
+    "static/media/10D.png": "/War/static/media/10D.cc406ab54f309d280739.png",
+    "static/media/11D.png": "/War/static/media/11D.83897c96e03ddab2d89c.png",
+    "index.html": "/War/index.html",
+    "main.89b45729.css.map": "/War/static/css/main.89b45729.css.map",
+    "main.baa4efd5.js.map": "/War/static/js/main.baa4efd5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.89b45729.css",
+    "static/js/main.baa4efd5.js"
+  ]
+}
