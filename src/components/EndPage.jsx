@@ -10,44 +10,55 @@ export default function EndPage(props) {
         props.newGame();
     }
 
-    if (props.playerWon) {
-        return (
-            <div id='end'>
-        
-                <div id='endWin' >
-                    <div id='exit' onClick={goHome}>
-                    X
-                    </div>
-                    WIN
-                    <br/>
-                    {props.playerData.wins} - {props.compData.wins}
-                </div>
-        
-                <div className='clickDiv' onClick={startNewGame}>
-                    Again?
-                </div>
-                
-            </div>
-        )
+    const startNewClassicGame = () => {
+        props.newClassicGame();
     }
-    else {
-        return (
-            <div id='end'>
 
-                <div id='endLose'>
-                    <div id='exit' onClick={goHome}>
-                    X
-                    </div>
-                    Lose
-                    <br/>
-                    {props.playerData.wins} - {props.compData.wins}
-                </div>
+    return (
+    props.playerWon ? 
+        <div id='end'>
         
-                <div className='clickDiv' onClick={startNewGame}>
-                    Again?
+            <div id='endWin' >
+                <div id='exit' onClick={goHome}>
+                    X
                 </div>
-                
+                WIN
+                <br/>
+                {props.playerData.wins} - {props.compData.wins}
             </div>
-          )
-    }
+        
+            <div className='newGameTypeContainer'>
+                <div className='clickDivNewGame' onClick={startNewGame}>
+                    New game
+                </div>
+                <div className='clickDivNewGame' onClick={startNewClassicGame}>
+                    Classic game
+                </div>
+            </div>
+                
+        </div>
+        : 
+        <div id='end'>
+
+            <div id='endLose'>
+                <div id='exit' onClick={goHome}>
+                    X
+                </div>
+                Lose
+                <br/>
+                {props.playerData.wins} - {props.compData.wins}
+            </div>
+
+            <div className='newGameTypeContainer'>
+                <div className='clickDivNewGame' onClick={startNewGame}>
+                    New game
+                </div>
+                <div className='clickDivNewGame' onClick={startNewClassicGame}>
+                    Classic game
+                </div>
+            </div>
+            
+        
+        </div>
+    )
 }

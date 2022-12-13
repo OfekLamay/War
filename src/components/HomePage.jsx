@@ -32,7 +32,7 @@ export default function HomePage(props) {
       
       <h2 id='warHeader'>Ready for WAR?</h2> <br/>
       <input id="nameInput" type={"text"} placeholder='Enter your name' className='nameLabel'></input> <br/> <br/>
-      <div className='clickDiv' onClick={validateName}>START</div> <br/> <br/>
+      <div className='clickDiv' onClick={validateName}>START</div> <br/> 
       <div className='clickDiv' onClick={validateNameClassic}>START CLASSIC</div> <br/> <br/>
       <ScoreBoard tableData={props.tableData}/>
 

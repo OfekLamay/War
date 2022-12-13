@@ -117,6 +117,21 @@ table, td, th {
   padding-left: 6px;
   padding-right: 6px;
   width: fit-content;
+  height: fit-content;
+  margin: auto;
+  text-shadow: 3px 3px #a186fc;
+  border-radius: 20px;
+}
+
+.clickDivNewGame {
+  cursor: pointer;
+  background-color: skyblue;
+  font-size: 35px;
+  color: white;
+  padding: 4px;
+  padding-left: 6px;
+  padding-right: 6px;
+  width: fit-content;
   margin: auto;
   text-shadow: 3px 3px #a186fc;
   border-radius: 20px;
@@ -139,13 +154,23 @@ table, td, th {
   margin:auto;
 }
 
+.newGameTypeContainer {
+  display: flex;
+  flex-direction: line;
+  text-align: center;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 500px;
+  margin:auto;
+  min-height: 120px;
+}
+
 img {
   width: 143px;
   height: auto;
 }
 
 .cardNumber {
-
   width: fit-content;
   text-align: center;
   margin: auto;
@@ -180,6 +205,12 @@ img {
   .clickDiv {
     font-size: 25px;
     border-radius: 25px;
+  }
+
+  .clickDivNewGame {
+    font-size: 25px;
+    border-radius: 25px;
+    max-width: 100px;
   }
 
   table, td, th {
