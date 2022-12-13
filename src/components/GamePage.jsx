@@ -15,7 +15,7 @@ export default function GamePage(props) {
   useEffect(()=>{
     if (!didGameStart)
       dealCards()
-  })
+  }, [])
 
   const dealCards = () => { // Randomly distribute cards
     setDidGameStart(true);
@@ -69,9 +69,9 @@ export default function GamePage(props) {
         document.getElementById("computerScore").innerHTML = "Com - " + (computerWins);
       }
 
-    document.getElementById("roundNumberShow").innerHTML = ((counter + 1) % 26);
+    document.getElementById("roundNumberShow").innerHTML = ((counter + 1));
 
-    setCounter(counter % (cardTypes * sameTypeCards / 2) + 1);
+    setCounter(counter + 1);
   }
 
   const randomizeArr = (array) => {

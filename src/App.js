@@ -4,6 +4,7 @@ import {useState} from 'react';
 import HomePage from './components/HomePage';
 import GamePage from './components/GamePage';
 import EndPage from './components/EndPage';
+import ClassicGamePage from './components/ClassicGamePage';
 
 function App() {
 
@@ -94,6 +95,7 @@ function App() {
   const pages = {
     home: 'home',
     game: 'game',
+    classicGame: 'classicGame',
     end: 'end'
   }
   const [currentPage, setCurrentPage] = useState(pages.home)
@@ -101,18 +103,32 @@ function App() {
   const displayPage = () => { // Show what needed and hide everything else
     switch(currentPage) {
       case pages.home:
-        {
-          return <HomePage tableData={playersHistory} updateName = {updateName} changePage = {setCurrentPage}/>
-        }
+      {
+        return <HomePage tableData={playersHistory} updateName = {updateName} changePage = {setCurrentPage}/>
+      }
       case pages.game:
-        {
-          return <GamePage player = {player} changePage = {setCurrentPage} updateResult = {updateWins}/>
-        }
+      {
+        return <GamePage player = {player} changePage = {setCurrentPage} updateResult = {updateWins}/>
+      }
       case pages.end:
-        {
-          return <EndPage newGame = {newGame} goHome = {goHome} changePage = {setCurrentPage} playerWon = {playerWon} playerData = {player} compData = {computer}/>
-        }
+      {
+        return <EndPage newClassicGame = {classicNewGame} newGame = {newGame} goHome = {goHome} changePage = {setCurrentPage} 
+        playerWon = {playerWon} playerData = {player} compData = {computer}/>
+      }
+      case pages.classicGame:
+      {
+        return <ClassicGamePage player = {player} changePage = {setCurrentPage} updateResult = {updateWins}/>
+      }
+      default:
+      {
+        return <HomePage tableData={playersHistory} updateName = {updateName} changePage = {setCurrentPage}/>
+      }
     }
+  }
+
+  const classicNewGame = () => {
+    updatePlayerHistory(player);
+    setCurrentPage("classicGame");
   }
 
   const newGame = () => {
